@@ -264,7 +264,7 @@ class ImpalaDialect(DefaultDialect):
         for col in schema:
             print('i am here')
             column_info.append({
-                'name': col[0].split('.')[-1],
+                'name': col[0],
                 'type': _impala_type_to_sqlalchemy_type[col[1]],
                 'nullable': True,
                 'autoincrement': False})
