@@ -267,6 +267,7 @@ class ImpalaDialect(DefaultDialect):
                 'type': _impala_type_to_sqlalchemy_type[col[1]],
                 'nullable': True,
                 'autoincrement': False})
+        raise ProgrammingError("I am here Incorrect number")
         return column_info
 
     def get_pk_constraint(self, connection, table_name, schema=None, **kw):
