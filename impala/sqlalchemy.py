@@ -263,7 +263,7 @@ class ImpalaDialect(DefaultDialect):
         column_info = []
         for col in schema:
             column_info.append({
-                'name': col[0],
+                'name': col[0].split['.'][-1],
                 'type': _impala_type_to_sqlalchemy_type[col[1]],
                 'nullable': True,
                 'autoincrement': False})
